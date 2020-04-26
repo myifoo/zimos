@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1, maximum-scale=1.0, user-scalable=no">
+    <title>Spotlight.js Demo</title>
+    <script src="../src/js/browser.js" type="module"></script>
+    <script src="./jquery-3.5.0.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="theme.css">
+    <style>
+        .footer-btn {
+            width: 150px;
+            height: 50px;
+            border-radius: 25px;
+            border: solid 1px #9e9898;
+            box-shadow: 0px 0px 20px #5e6061;
+            background-color: #303138;
+            opacity: 0.3;
+            outline:none;
+        }
+
+
+        .footer-btn:hover {
+            opacity:0.7;
+            box-shadow: 0 0px 16px 0 #5e6061;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function hideImage(){
+            $("#123456").fadeIn();
+        }
+
+        function toggle(event){
+            $("#123456").fadeToggle();
+        }
+
+        window.onload = function(){
+            const gallery = [
+                {
+                    title: "Image 1",
+                    src: "gallery/london-1758181.jpg"
+                },{
+                    title: "Image 2",
+                    src: "gallery/sea-1975403.jpg"
+                },{
+                    title: "Image 3",
+                    src: "gallery/newport-beach-2089906.jpg"
+                },{
+                    title: "Image 1",
+                    src: "gallery/london-1758181.jpg"
+                },{
+                    title: "Image 2",
+                    src: "gallery/sea-1975403.jpg"
+                },{
+                    title: "Image 3",
+                    src: "gallery/newport-beach-2089906.jpg"
+                },{
+                    title: "Image 1",
+                    src: "gallery/london-1758181.jpg"
+                },{
+                    title: "Image 2",
+                    src: "gallery/sea-1975403.jpg"
+                },{
+                    title: "Image 3",
+                    src: "gallery/newport-beach-2089906.jpg"
+                },
+            ];
+
+            window.showGallery = function(index){
+                Spotlight.show(gallery, {
+                    index: index,
+                    theme: "dark"
+                });
+            };
+
+            showGallery(3);
+        }
+    </script>
+</body>
+</html>
